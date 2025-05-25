@@ -1,0 +1,50 @@
+arch:
+    max_epochs: 50
+    continue_ckpt_epochs: True
+model:
+    name: 'VelSupModel'
+    optimizer:
+        name: 'Adam'
+        depth:
+            lr: 0.0002
+        pose:
+            lr: 0.0002
+    scheduler:
+        name: 'StepLR'
+        step_size: 30
+        gamma: 0.5
+    depth_net:
+        name: 'WavPackNet'
+        version: '1A'
+    pose_net:
+        name: 'PoseNet'
+        version: ''
+    params:
+        crop: 'garg'
+        min_depth: 0.0
+        max_depth: 80.0
+datasets:
+    augmentation:
+        image_shape: (384, 1280)
+    train:
+        batch_size: 4
+        dataset: ['KITTI']
+        path: ['/datasets_local/datasets_valeoai/KITTI_Depth/raw_data']
+        split: ['splits/eigen_split/eigen_zhou_files.txt']
+        depth_type: ['groundtruth']
+        repeat: [2]
+    validation:
+        dataset: ['KITTI']
+        path: ['/datasets_local/datasets_valeoai/KITTI_Depth/raw_data']
+        split: ['splits/eigen_split/eigen_test_files.txt'] # ,'splits/eigen_split/eigen_val_files.txt'
+        depth_type: ['velodyne','groundtruth']
+    test:
+        dataset: ['KITTI']
+        path: ['/datasets_local/datasets_valeoai/KITTI_Depth/raw_data']
+        split: ['splits/eigen_split/eigen_test_files.txt']
+        depth_type: ['velodyne','groundtruth']
+
+checkpoint:
+    # Folder where .ckpt files will be saved during training
+    filepath: '/mnt/nas_data/disk4/lei/depth_results/checkpoints'
+    monitor: 'abs_rel_pp'
