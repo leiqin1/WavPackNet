@@ -5,10 +5,14 @@ Official PyTorch implementation of the _WavPackNet_ paper: **Wavelet Packing for
 
 Our main contributions: **WavPacking**, **WavUnPacking** blocks and **WavPackNet** are implemented in [sfm_learner/networks/layers/wavpacking.py](./sfm_learner/networks/layers/wavpacking.py) and [sfm_learner/networks/depth/WavPackNet.py](./sfm_learner/networks/depth/WavPackNet.py) respectively. The self-supervised SfM learning framework is adopted from [PackNet-SfM](https://github.com/TRI-ML/packnet-sfm).
 
-## Install
+## Install dependencies
 
-TODO: add requirements.txt
-
+Create a new python virtual environment (named "depth") and then install the packages listed in [requirements.txt](requirements.txt).
+```bash
+python3 -m venv depth
+source depth/bin/activate
+pip install WavPackNet_dir/requirements.txt
+```
 
 ## Datasets
 
@@ -19,28 +23,29 @@ Please follow the instructions from [SfMLearner](https://github.com/tinghuiz/SfM
 Please follow the instructions from [PackNet-SfM](https://github.com/TRI-ML/packnet-sfm) to prepare the KITTI dataset for training, validation and evaluation.
 
 ## Training
+Here are some examples for training and fine-tuning models of different configurations.
 
 To train WavPackNet from scratch on Cityscape dataset using 192x640 resolution:
 
 ```bash
-python3 scripts/train.py configs/train_cityscapes_wavpack_MR.yaml
+python3 scripts/train.py --file configs/train_cityscapes_wavpack_MR.yaml
 ```
 
 To train WavPackNet from scratch on KITTI dataset using 192x640 resolution:
 
 ```bash
-python3 scripts/train.py configs/train_kitti_wavpack_MR.yaml
+python3 scripts/train.py --file configs/train_kitti_wavpack_MR.yaml
 ```
 
 To train WavPackNet from scratch on KITTI dataset using 384x1280 resolution:
 
 ```bash
-python3 scripts/train.py configs/train_kitti_wavpack_HR.yaml
+python3 scripts/train.py --file configs/train_kitti_wavpack_HR.yaml
 ```
 
 With a model trained on the Cityscapes dataset using 192x640 resolution, to finetune it on the KITTI dataset:
 ```bash
-python3 scripts/train.py pretrained_cityscapes_model.ckpt configs/train_kitti_wavpack_MR.yaml
+python3 scripts/train.py --ckpt pretrained_cityscapes_model.ckpt --file configs/train_kitti_wavpack_MR.yaml
 ```
 
 ## Inference
@@ -52,7 +57,7 @@ python3 scripts/infer.py --checkpoint <checkpoint.ckpt> --input <image or folder
 
 ## Evaluation
 
-To evaluate a trained model (e.g. our [released models](#models)), provide the `.ckpt` checkpoint, followed optionally by a `.yaml` config file that overrides the configuration stored in the checkpoint, to [scripts/eval.py](./scripts/eval.py).
+To evaluate a trained model (e.g. our [released models](#models)), provide the `.ckpt` checkpoint and optionally a `.yaml` config file that overrides the configuration stored in the checkpoint to [scripts/eval.py](./scripts/eval.py).
 
 ```bash
 python3 scripts/eval.py --checkpoint <checkpoint.ckpt> [--config <config.yaml>]

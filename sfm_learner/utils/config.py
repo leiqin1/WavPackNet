@@ -216,7 +216,7 @@ def parse_train_file(file, ckpt):
 
     # If it's a .ckpt checkpoint file
     if ckpt and ckpt.endswith('ckpt'):
-        checkpoint = torch.load(ckpt, map_location='cpu')
+        checkpoint = torch.load(ckpt, map_location='cpu', weights_only=False)
         if not config:
             config = checkpoint.pop('config')
         checkpoint['file'] = ckpt
