@@ -1,7 +1,7 @@
 model:
     name: 'SelfSupModel'
     depth_net:
-        name: 'PackNet01'
+        name: 'WavPackNet'
         version: '1A'
     pose_net:
         name: 'PoseNet'
@@ -12,10 +12,10 @@ model:
         max_depth: 80.0
 datasets:
     augmentation:
-        image_shape: (192, 640)
+        image_shape: (384, 1280)
     test:
         dataset: ['KITTI']
-        path: ['/home/lqin1/Workspace/Depth/Dataset/KITTI/raw_data/']
+        path: ['/media/lqin/easystore/Dataset/KITTI/Depth/raw_data/']
         split: ['splits/eigen_split/eigen_test_files.txt']
         depth_type: ['groundtruth']
 save:

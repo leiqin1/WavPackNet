@@ -32,9 +32,15 @@ To train WavPackNet from scratch on KITTI dataset using 192x640 resolution:
 python3 scripts/train.py configs/train_kitti_wavpack_MR.yaml
 ```
 
-With a model trained on the Cityscapes dataset, to finetune it on the KITTI dataset:
+To train WavPackNet from scratch on KITTI dataset using 384x1280 resolution:
+
 ```bash
-python3 scripts/train.py pretrained_cityscapes_model.ckpt
+python3 scripts/train.py configs/train_kitti_wavpack_HR.yaml
+```
+
+With a model trained on the Cityscapes dataset using 192x640 resolution, to finetune it on the KITTI dataset:
+```bash
+python3 scripts/train.py pretrained_cityscapes_model.ckpt configs/train_kitti_wavpack_MR.yaml
 ```
 
 ## Inference

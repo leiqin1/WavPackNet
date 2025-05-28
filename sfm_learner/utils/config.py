@@ -339,7 +339,7 @@ def parse_test_config(ckpt_file, cfg_default, cfg_file):
     """
     if ckpt_file.endswith('.ckpt'):
         # Load checkpoint
-        ckpt = torch.load(ckpt_file, map_location='cpu')
+        ckpt = torch.load(ckpt_file, map_location='cpu', weights_only=False)
         # Get base configuration
         config_default = get_default_config(cfg_default)
         # Extract configuration and model state

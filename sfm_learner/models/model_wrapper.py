@@ -399,7 +399,7 @@ def setup_depth_net(config, prepared, **kwargs):
     """
     print0(pcolor('DepthNet: %s' % config.name, 'yellow'))
     depth_net = load_class_args_create(config.name,
-        paths=['packnet_sfm.networks.depth',],
+        paths=['sfm_learner.networks.depth',],
         args={**config, **kwargs},
     )
     if not prepared and config.checkpoint_path != '':
@@ -428,7 +428,7 @@ def setup_pose_net(config, prepared, **kwargs):
     """
     print0(pcolor('PoseNet: %s' % config.name, 'yellow'))
     pose_net = load_class_args_create(config.name,
-        paths=['packnet_sfm.networks.pose',],
+        paths=['sfm_learner.networks.pose',],
         args={**config, **kwargs},
     )
     if not prepared and config.checkpoint_path != '':
@@ -456,7 +456,7 @@ def setup_model(config, prepared, **kwargs):
         Created model
     """
     print0(pcolor('Model: %s' % config.name, 'yellow'))
-    model = load_class(config.name, paths=['packnet_sfm.models',])(
+    model = load_class(config.name, paths=['sfm_learner.models',])(
         **{**config.loss, **kwargs})
     # Add depth network if required
     if 'depth_net' in model.network_requirements:

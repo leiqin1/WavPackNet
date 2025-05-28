@@ -35,16 +35,16 @@ datasets:
         repeat: [1]
     validation:
         dataset: ['KITTI']
-        path: ['/datasets_local/datasets_valeoai/KITTI_Depth/raw_data/']
+        path: ['/media/lqin/easystore/Dataset/KITTI/Depth/raw_data/']
         split: ['splits/eigen_split/eigen_val_files.txt']
         depth_type: ['velodyne', 'groundtruth']
     test:
         dataset: ['KITTI']
-        path: ['/datasets_local/datasets_valeoai/KITTI_Depth/raw_data/']
+        path: ['/media/lqin/easystore/Dataset/KITTI/Depth/raw_data/']
         split: ['splits/eigen_split/eigen_test_files.txt']
         depth_type: ['velodyne', 'groundtruth']
 
 checkpoint:
     # Folder where .ckpt files will be saved during training
-    filepath: '/datasets_local/datasets_valeoai/cityscapes_monodepth/Results/checkpoints'
+    filepath: '/home/lqin/worksapace/depth/Models'
     monitor: 'abs_rel_pp_gt'
