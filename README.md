@@ -96,7 +96,7 @@ If you find this code useful, please cite our work:
 
 ```
 @inproceedings{wavpacknet,
-  author = {Rhim, Ayoub and Qin, Lei and Benmokhtar, Rachid and Perrotton Xavier},
+  author = {Rhim, Ayoub and Qin, Lei and Benmokhtar, Rachid and Perrotton, Xavier},
   title = {Wavelet Packing for Self-Supervised Monocular Depth Estimation},
   booktitle = {IEEE Conference on Image Processing (ICIP)},
   primaryClass = {cs.CV}
