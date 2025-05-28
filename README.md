@@ -88,7 +88,7 @@ python3 scripts/eval.py --checkpoint <checkpoint.ckpt> [--config <config.yaml>]
 
 ## License
 
-The source code is released under the [MIT license](LICENSE.md).
+The source code is released under the [MIT license](LICENSE).
 
 ## References
 
