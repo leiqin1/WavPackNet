@@ -11,7 +11,7 @@ Create a new python virtual environment (named "depth") and then install the pac
 ```bash
 python3 -m venv depth
 source depth/bin/activate
-pip install WavPackNet_dir/requirements.txt
+pip install -r WavPackNet_dir/requirements.txt
 ```
 
 ## Datasets
