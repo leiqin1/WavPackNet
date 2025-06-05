@@ -7,7 +7,7 @@ Our main contributions: **WavPacking**, **WavUnPacking** blocks and **WavPackNet
 
 ## Install dependencies
 
-Create a new python virtual environment (named "depth") and then install the packages listed in [requirements.txt](requirements.txt).
+Create a new python virtual environment (named "depth") and then install the packages listed in [requirements.txt](requirements.txt) (tested with Python 3.10.12).
 ```bash
 python3 -m venv depth
 source depth/bin/activate
