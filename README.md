@@ -3,11 +3,9 @@
 Official PyTorch implementation of the _WavPackNet_ paper: **Wavelet Packing for Self-Supervised Monocular Depth Estimation (ICIP 2025)**,
 *Ayoub Rhim, Lei Qin, Rachid Benmokhtar and Xavier Perrotton* from anSWer, Valeo Brain.
 
-Our main contributions: **WavPacking**, **WavUnPacking** blocks and **WavPackNet** are implemented in [sfm_learner/networks/layers/wavpacking.py](./sfm_learner/networks/layers/wavpacking.py) and [sfm_learner/networks/depth/WavPackNet.py](./sfm_learner/networks/depth/WavPackNet.py) respectively. The self-supervised SfM learning framework is adopted from [PackNet-SfM](https://github.com/TRI-ML/packnet-sfm).
+![Demo Animation](resources\WavPackNet_Teleop_demo.gif)
 
-<video src="resources/WavPackNet_Teleop_demo.mp4" controls width="600">
-  Your browser does not support the video tag.
-</video>
+Our main contributions: **WavPacking**, **WavUnPacking** blocks and **WavPackNet** are implemented in [sfm_learner/networks/layers/wavpacking.py](./sfm_learner/networks/layers/wavpacking.py) and [sfm_learner/networks/depth/WavPackNet.py](./sfm_learner/networks/depth/WavPackNet.py) respectively. The self-supervised SfM learning framework is adopted from [PackNet-SfM](https://github.com/TRI-ML/packnet-sfm).
 
 ## Install dependencies
 
