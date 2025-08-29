@@ -108,13 +108,17 @@ The source code is released under the [MIT license](LICENSE).
 If you find this code useful, please cite our work:
 
 ```
-@inproceedings{wavpacknet,
-  author = {Rhim, Ayoub and Qin, Lei and Benmokhtar, Rachid and Perrotton, Xavier},
-  title = {Wavelet Packing for Self-Supervised Monocular Depth Estimation},
-  booktitle = {IEEE Conference on Image Processing (ICIP)},
-  primaryClass = {cs.CV}
-  year = {2025},
-}
+@INPROCEEDINGS{wavpacknet,
+  author={Rhim, Ayoub and Qin, Lei and Benmokhtar, Rachid and Perrotton, Xavier},
+  booktitle={2025 IEEE International Conference on Image Processing (ICIP)}, 
+  title={Wavelet Packing for Self-Supervised Monocular Depth Estimation}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1540-1545},
+  keywords={Wavelet transforms;Training;Visualization;Three-dimensional displays;Accuracy;Laser radar;Depth measurement;Self-supervised learning;Image sequences;Convolutional neural networks;Monocular Depth Estimation;Wavelet Transform;Self-Supervised Learning},
+  doi={10.1109/ICIP55913.2025.11084432}}
+
 ```
 
 ## Acknowledgement
