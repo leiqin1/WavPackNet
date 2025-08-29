@@ -116,7 +116,7 @@ If you find this code useful, please cite our work:
   volume={},
   number={},
   pages={1540-1545},
-  keywords={Wavelet transforms;Training;Visualization;Three-dimensional displays;Accuracy;Laser radar;Depth measurement;Self-supervised learning;Image sequences;Convolutional neural networks;Monocular Depth Estimation;Wavelet Transform;Self-Supervised Learning},
+  keywords={Monocular Depth Estimation;Wavelet Transform;Self-Supervised Learning},
   doi={10.1109/ICIP55913.2025.11084432}}
 
 ```
